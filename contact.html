@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+    <link rel="stylesheet" href="style.css">
+    <title>OST Contact</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">OSTPE</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about_us.html" class="nav-link">About Us</a></li>
+                <li><a href="dowload.html" class="nav-link">Downloads</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainc container">
+        <section class="contact">
+            <h1>Get in touch</h1>
+            <p>If you have questions or need support, fill out the form below or email us at:</p>
+            <p><a href="mailto:adamviaene333@gmail.com">adamviaene333@gmail.com</a></p>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="form-container">
+                <h2>Send us a message</h2>
+                <form action="process-form.php" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority">
+                            <option value="1">Low</option>
+                            <option value="2" selected>Medium</option>
+                            <option value="3">High</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message Type</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="type" value="1" checked>
+                                <span class="radio-text">Complaint</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="type" value="2">
+                                <span class="radio-text">Suggestion</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="term" required>
+                            <span class="checkbox-text">I agree to the terms and conditions *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    <section class="news">
+        <h2>Updates &amp; News</h2>
+        <p>Subscribe to our newsletter and receive changelogs and updates directly in your inbox.</p>
+    </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 OSTPE. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

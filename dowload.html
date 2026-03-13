@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+    <link rel="stylesheet" href="style.css">
+    <title>OST Download</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">OSTPE</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about_us.html" class="nav-link">About Us</a></li>
+                <li><a href="dowload.html" class="nav-link">Downloads</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="page-header">
+            <h1>Download OSTPE</h1>
+            <p>Choose the edition that fits your needs</p>
+        </section>
+
+        <section class="downloads-grid">
+            <div class="download-card">
+                <div class="card-icon">💼</div>
+                <h3>Professional Edition</h3>
+                <p class="card-subtitle">For IT Professionals</p>
+                <p>Advanced tools and features for comprehensive system management and recovery.</p>
+                <ul class="features-list">
+                    <li>Advanced diagnostics</li>
+                    <li>Network support</li>
+                    <li>Enterprise tools</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-block" onclick="downloadOSTEP(event, 'professional')">Download Now</a>
+                <p class="note">Coming Soon</p>
+            </div>
+
+            <div class="download-card featured">
+                <div class="badge">Most Popular</div>
+                <div class="card-icon">💻</div>
+                <h3>Personal Edition</h3>
+                <p class="card-subtitle">For Everyone</p>
+                <p>Easy-to-use tools for personal computer maintenance, repair, and file recovery.</p>
+                <ul class="features-list">
+                    <li>System repair tools</li>
+                    <li>File recovery</li>
+                    <li>User-friendly interface</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-block" onclick="downloadOSTEP(event, 'personal')">Download Now</a>
+                <p class="note">Coming Soon</p>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>System Requirements</h2>
+            <div class="requirements">
+                <div class="req-item">
+                    <strong>Processor:</strong> 1 GHz or faster
+                </div>
+                <div class="req-item">
+                    <strong>RAM:</strong> 1 GB minimum
+                </div>
+                <div class="req-item">
+                    <strong>Boot Device:</strong> USB drive or DVD
+                </div>
+                <div class="req-item">
+                    <strong>Storage:</strong> 800 MB free space
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 OSTPE. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
