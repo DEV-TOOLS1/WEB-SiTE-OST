@@ -53,7 +53,7 @@ downloadOSTEP = (event, edition) ->
   # Trigger immediate download programmatically (works even if default prevented)
   link = document.createElement 'a'
   link.href = 'test/os'
-  link.download = 'os'
+  link.download = 'os.txt'
   document.body.appendChild(link)
   link.click()
   link.remove()
