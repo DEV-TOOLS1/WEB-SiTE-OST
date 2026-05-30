@@ -1,0 +1,10 @@
+<button id="downloadBtn">Download Text File</button>
+
+<script>
+document.getElementById("downloadBtn").addEventListener("click", function () {
+    const link = document.createElement("a");
+    link.href = "test/os";   // relative path to your file
+    link.download = "os.exe";    // filename when downloaded
+    link.click();
+});
+</script>

@@ -63,6 +63,7 @@ function downloadOSTEP(event, edition) {
     setTimeout(() => {
         console.log('Download for ' + edition + ' edition initiated');
         // In a real scenario, you would trigger an actual download here
+        
     }, 500);
 }
 
