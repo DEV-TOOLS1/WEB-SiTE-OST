@@ -222,22 +222,56 @@ body {
     color: var(--color-text);
 }
 
+header {
+    position: relative;
+}
+
+.navbar {
+    position: relative;
+    z-index: 20;
+}
+
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
     }
+
+    .navbar {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .nav-logo {
+        font-size: 1.1rem;
+    }
+
     .nav-menu {
         position: absolute;
-        top: 100%;
-        right: 0;
-        background: var(--color-primary);
+        top: calc(100% + 8px);
+        right: var(--space-md);
+        left: var(--space-md);
+        background: var(--color-surface);
         flex-direction: column;
-        width: 200px;
-        transform: translateX(100%);
-        transition: transform var(--transition-fast);
+        width: auto;
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-strong);
+        border: 1px solid rgba(255,255,255,0.1);
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all var(--transition-fast);
     }
+
     .nav-menu.open {
-        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.8rem 1rem;
+        text-align: center;
     }
 }
 
@@ -1046,42 +1080,62 @@ footer {
     .stats-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .team-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .download-card.featured {
         transform: scale(1);
     }
-    
+
     .download-card.featured:hover {
         transform: translateY(-8px);
     }
-    
+
     .hero {
         grid-template-columns: 1fr;
         min-height: auto;
         padding: var(--space-lg);
     }
-    
+
     .hero-content h1 {
         font-size: 1.75rem;
     }
-    
+
+    .hero-content p,
+    .page-header p,
+    .cta-section p,
+    .about-intro p,
+    .feature-card p,
+    .download-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+    }
+
+    .hero-ctas .btn,
+    .btn-block {
+        width: 100%;
+        display: block;
+    }
+
     .page-header h1 {
         font-size: 1.75rem;
     }
-    
+
     .about-intro {
         padding: var(--space-lg);
     }
-    
+
     .story-year {
         top: 10px;
         left: var(--space-md);
     }
-    
+
     .story-card {
         padding: var(--space-md);
         padding-top: var(--space-lg);
@@ -1099,8 +1153,16 @@ footer {
         padding: var(--space-md);
     }
 
-    .form-container {
-        padding: var(--space-lg);
+    .form-container,
+    .contact,
+    .news,
+    .feature-card,
+    .download-card,
+    .team-card,
+    .value-card,
+    .req-item,
+    .stat-card {
+        padding: var(--space-md);
     }
 
     .radio-group {
@@ -1110,6 +1172,38 @@ footer {
 
     .checkbox-label {
         padding: var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    .hero,
+    .features,
+    .cta-section,
+    .page-header,
+    .info-section,
+    .about-intro,
+    .stats-section {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+
+    .hero-content h1,
+    .features h2,
+    .cta-section h2,
+    .page-header h1,
+    .story-section h2,
+    .team-section h2,
+    .values-section h2,
+    .stats-section h2 {
+        font-size: 1.45rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1rem;
     }
 }
 
